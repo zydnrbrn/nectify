@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StorePostRequest;
 use App\Models\Post;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class PostController extends Controller
@@ -17,9 +15,13 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->get();
-
-        return Inertia::render('Post/Index', ['posts' => $posts]);
+        $posts = Post::all();
+        return Inertia::render('Post/Index', [
+            'title' => 'Post Page',
+            'description' => 'sssssssssss',
+            'author' => 'sgsg',
+            'posts' => $posts,
+        ]);
     }
 
     /**
@@ -29,7 +31,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Post/Create');
+        //
     }
 
     /**
@@ -38,22 +40,18 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostRequest $request)
+    public function store(Request $request)
     {
-        Post::create(
-            $request->validated()
-        );
-
-        return Redirect::route('posts.index');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
         //
     }
@@ -61,44 +59,34 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
     public function edit(Post $post)
     {
-        return Inertia::render('Post/Edit', [
-            'post' => [
-                'id' => $post->id,
-                'title' => $post->title,
-                'description' => $post->description
-            ]
-        ]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(StorePostRequest $request, Post $post)
+    public function update(Request $request, Post $post)
     {
-        $post->update($request->validated());
-
-        return Redirect::route('posts.index');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
     public function destroy(Post $post)
     {
-        $post->delete();
-
-        return Redirect::route('posts.index');
+        //
     }
 }

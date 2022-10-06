@@ -8,7 +8,7 @@ export default function Welcome (props) {
     const [navbar, setNavbar] = useState(false);
     return (
         <>
-           <Head title="Welcome" />
+           <Head title={props.title} />
            {/* navbar */}
            
             <nav className="w-full bg-white/30 shadow sticky">
