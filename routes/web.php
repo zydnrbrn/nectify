@@ -20,7 +20,7 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Home', [
-        'title' => 'Selamat Datang',
+        'title' => 'Connect People,More People... In The World. ',
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,

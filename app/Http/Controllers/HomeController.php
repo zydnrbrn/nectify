@@ -19,7 +19,7 @@ class HomeController extends Controller
                 'name' => 'Zidan Khulul Sazid',
                 'username' => 'zydnrbrn'
             ],
-            'web_name' => 'zcorleone.my.id'
+            'web_name' => 'Nectify'
         ]);
     }
 }

@@ -2,6 +2,8 @@ import { Link, Head } from '@inertiajs/inertia-react';
 import React from 'react';
 import { useState } from 'react';
 import Index from './Components/Index';
+import { FaUserCircle } from 'react-icons/fa';
+import { IconContext } from 'react-icons';
 
 
 export default function Welcome (props) {
@@ -16,11 +18,10 @@ export default function Welcome (props) {
                 <div>
                     <div className="flex items-center justify-between py-3 md:block">
                         <a className='flex' href="#">
-                        <img src="src/img/logo.jpg" alt="Logo" className='mr-3 h-6 sm:h-9 rounded-full' />
             <h1 className='sm:text-2xl
             text-xl font-bold font-righteous text-transparent bg-clip-text bg-gradient-to-r from-black to-main-red whitespace-nowrap dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:to-main-red
             '>
-                Zcorleone
+                Nectify
                 </h1>
                         </a>
                         <div className="md:hidden">
@@ -70,22 +71,22 @@ export default function Welcome (props) {
                           <ul className="lg:mt-0
                         items-center space-y-8 md:flex md:space-x-3 md:items-end sm:my-3">
                             <li className="sm:text-lg md:text-base
-                            text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
+                            text-main-red hover:text-black  hover:rounded-sm
                             ">
                                 <Link href='/'>Home</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
-                            text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
+                             text-main-red hover:text-black hover:rounded-sm
                             ">
                                 <Link href='/'>Feed</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
-                            text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
+                           text-main-red hover:text-black hover:rounded-sm
                             ">
                                <Link href='/chatify'>Chats</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
-                            text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
+                           text-main-red hover:text-black hover:rounded-sm
                             ">
                            <Link href='/post'>Post</Link>
                             </li>
@@ -97,7 +98,9 @@ export default function Welcome (props) {
                     {props.auth.user ? (
                         <button className="bg-main-red border w-20 rounded-md mx-24 sm:w-24 sm:mx-24 md:absolute md:right-0">
                         <Link href={route('dashboard')} className="text-sm sm:text-base text-white dark:text-gray-500 font-righteous w-24">
-                            Dashboard
+                        <IconContext.Provider value={{ color:"white", className: "w-10 h-7 mx-auto" }} >
+                        <FaUserCircle />
+                        </IconContext.Provider>
                         </Link>
                         </button>
                     ) : (
@@ -131,20 +134,22 @@ export default function Welcome (props) {
                     {props.auth.user ? (
                         <button className="bg-main-red border w-20 rounded-md mx-24 sm:w-24 sm:mx-24 md:right-0">
                         <Link href={route('dashboard')} className="text-sm sm:text-base text-white dark:text-gray-500 font-righteous w-24">
-                            Dashboard
+                        <IconContext.Provider value={{ color:"white", className: "w-10 h-7 mx-auto" }} >
+                        <FaUserCircle />
+                        </IconContext.Provider>
                         </Link>
                         </button>
                     ) : (
                         <>
-                        <button className="bg-main-red border w-20 rounded-md  md:right-0">
-                            <Link href={route('login')} className="text-sm sm:text-base text-white font-righteous dark:text-gray-500">
+                        <button className="bg-main-red border w-20 rounded-md hover:border hover:bg-white hover:text-main-red hover:border-main-red md:right-0">
+                            <Link href={route('login')} className="text-sm sm:text-base text-white font-righteous hover:text-main-red   dark:text-gray-500">
                                 Log in
                             </Link>
                             </button>
-                        <button className="bg-main-red border w-20 mx-2 rounded-md md:right-0">
+                        <button className="bg-main-red border w-20 mx-2 rounded-md hover:border hover:bg-white hover:text-main-red hover:border-main-red md:right-0">
                             <Link
                                 href={route('register')}
-                                className="text-sm sm:text-base text-white dark:text-gray-500 font-righteous"
+                                className="text-sm sm:text-base hover:text-main-red text-white dark:text-gray-500 font-righteous"
                             >
                                 Register
                             </Link>

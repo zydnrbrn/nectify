@@ -1,6 +1,6 @@
 import './bootstrap';
 import '../css/app.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/inertia-react';

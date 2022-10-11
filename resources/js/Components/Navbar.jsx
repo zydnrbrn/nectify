@@ -7,16 +7,15 @@ export default function Navbar (props) {
     const [navbar,setNavbar] = useState(false);
     return (
         <>
-          <nav className="w-full bg-white/30 shadow sticky">
+          <nav className="w-full bg-white/30 shadow fixed">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:block">
                         <a className='flex' href="#">
-                        <img src="src/img/logo.jpg" alt="Logo" className='mr-3 h-6 sm:h-9 rounded-full' />
             <h1 className='sm:text-2xl
             text-xl font-bold font-righteous text-transparent bg-clip-text bg-gradient-to-r from-black to-main-red whitespace-nowrap dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:to-main-red
             '>
-                Zcorleone
+                Nectify
                 </h1>
                         </a>
                         <div className="md:hidden">
@@ -66,22 +65,22 @@ export default function Navbar (props) {
                           <ul className="lg:mt-0
                         items-center space-y-8 md:flex md:space-x-3 md:items-end sm:my-3">
                             <li className="sm:text-lg md:text-base
-                            text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
+                            text-main-red hover:text-black  hover:rounded-sm
                             ">
-                              <Link href='/'>Home</Link>
+                                <Link href='/'>Home</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
-                            text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
+                             text-main-red hover:text-black hover:rounded-sm
                             ">
-                           <Link href='/'>Feed</Link>
+                                <Link href='/'>Feed</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
-                            text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
+                           text-main-red hover:text-black hover:rounded-sm
                             ">
                                <Link href='/chatify'>Chats</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
-                            text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
+                           text-main-red hover:text-black hover:rounded-sm
                             ">
                            <Link href='/post'>Post</Link>
                             </li>
