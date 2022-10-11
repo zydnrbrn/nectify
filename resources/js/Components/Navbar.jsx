@@ -7,7 +7,7 @@ export default function Navbar (props) {
     const [navbar,setNavbar] = useState(false);
     return (
         <>
-          <nav className="w-full bg-white/30 shadow">
+          <nav className="w-full bg-white/30 shadow sticky">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:block">
@@ -65,55 +65,31 @@ export default function Navbar (props) {
                     >
                           <ul className="lg:mt-0
                         items-center space-y-8 md:flex md:space-x-3 md:items-end sm:my-3">
-                            <li className="sm:text-lg md:text-base 
+                            <li className="sm:text-lg md:text-base
                             text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
                             ">
-                                <a href="#">Home</a>
+                              <Link href='/'>Home</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
                             text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
                             ">
-                                <a href="#">About</a>
+                           <Link href='/'>Feed</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
                             text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
                             ">
-                                <a href="#">Contact</a>
+                               <Link href='/chatify'>Chats</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
                             text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
                             ">
-                                <a href="#">Article</a>
+                           <Link href='/post'>Post</Link>
                             </li>
                         </ul>
 
                         <div className="mt-3  space-y-2 lg:hidden md:inline-block">
                         <div className=" dark:bg-gray-100 sm:items-center sm:pt-0">
-                <div className="px-6 py-1 absolute md:hidden mx-12 sm:block sm:right-0">
-                    {props.auth.user ? (
-                        <button className="bg-main-red border w-20 rounded-md mx-24 sm:w-24 sm:mx-24 md:absolute md:right-0">
-                        <Link href={route('dashboard')} className="text-sm sm:text-base text-white dark:text-gray-500 font-righteous w-24">
-                            Dashboard
-                        </Link>
-                        </button>
-                    ) : (
-                        <>
-                        <button className="bg-main-red border w-20 rounded-md  md:absolute md:right-0">
-                            <Link href={route('login')} className="text-sm sm:text-base text-white font-righteous dark:text-gray-500">
-                                Log in
-                            </Link>
-                            </button>
-                        <button className="bg-main-red border w-20 mx-2 rounded-md md:absolute md:right-20">
-                            <Link
-                                href={route('register')}
-                                className="text-sm sm:text-base text-white dark:text-gray-500 font-righteous"
-                            >
-                                Register
-                            </Link>
-                            </button>
-                        </>
-                    )}
-                </div>
+               
                 </div>
                 </div>
                     </div>
@@ -123,31 +99,7 @@ export default function Navbar (props) {
                 {/* button in md+ */}
                 <div className=" hidden space-x-2 md:inline-block">
                 <div className=" dark:bg-gray-100 sm:items-center ">
-                <div className="px-6 mx-10 sm:block sm:right-0 md:right-0">
-                    {props.auth.user ? (
-                        <button className="bg-main-red border w-20 rounded-md mx-24 sm:w-24 sm:mx-24 md:right-0">
-                        <Link href={route('dashboard')} className="text-sm sm:text-base text-white dark:text-gray-500 font-righteous w-24">
-                            Dashboard
-                        </Link>
-                        </button>
-                    ) : (
-                        <>
-                        <button className="bg-main-red border w-20 rounded-md  md:right-0">
-                            <Link href={route('login')} className="text-sm sm:text-base text-white font-righteous dark:text-gray-500">
-                                Log in
-                            </Link>
-                            </button>
-                        <button className="bg-main-red border w-20 mx-2 rounded-md md:right-0">
-                            <Link
-                                href={route('register')}
-                                className="text-sm sm:text-base text-white dark:text-gray-500 font-righteous"
-                            >
-                                Register
-                            </Link>
-                            </button>
-                        </>
-                    )}
-                </div>
+              
                 </div>
                 </div>
             </div>

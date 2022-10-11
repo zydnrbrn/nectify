@@ -12,7 +12,7 @@ module.exports = {
 
     theme: {
       fontFamily: {
-        'righteous': ['Righteous']
+        'righteous': ['JetBrainsMono']
     },
         extend: {
           colors: {

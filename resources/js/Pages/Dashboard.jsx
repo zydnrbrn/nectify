@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/inertia-react';
 
@@ -7,14 +7,19 @@ export default function Dashboard(props) {
         <AuthenticatedLayout
             auth={props.auth}
             errors={props.errors}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
         >
-            <Head title="Dashboard" />
+            <Head title="Dashboard Profile" />
 
-            <div className="py-12">
-                <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div className="p-6 bg-white border-b border-gray-200">You're logged in!</div>
+            <div className="py-5">
+                <div className="mx-auto sm:px-6 lg:px-8">
+                    <div className="bg-white overflow-hidden sm:rounded-lg">
+                   
+                        <div className="p-6 bg-black w-full rounded-md h-[327px]">
+                        </div>
+                        <div className="bg-slate-300 w-[300px] top-[250px] left-[75px] absolute h-[300px] rounded-full"></div>
+                        <div className="account-name text-center"></div>
+                        
+                        
                     </div>
                 </div>
             </div>

@@ -1,5 +1,7 @@
 <?php
 
+
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -26,10 +28,12 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/post', [PostController::class, 'index']);
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+// post route
+Route::get('/post', [PostController::class, 'index']);
+Route::resource('post', 'App\Http\Controllers\PostController');
+
+Route::get('/dashboard',[ProfileController::class, 'index'], function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';

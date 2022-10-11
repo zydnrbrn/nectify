@@ -72,22 +72,22 @@ export default function Welcome (props) {
                             <li className="sm:text-lg md:text-base
                             text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
                             ">
-                                <a href="#">Home</a>
+                                <Link href='/'>Home</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
                             text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
                             ">
-                                <a href="#">About</a>
+                                <Link href='/'>Feed</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
                             text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
                             ">
-                                <a href="#">Contact</a>
+                               <Link href='/chatify'>Chats</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
                             text-main-red hover:text-indigo-200 hover:bg-main-red hover:rounded-sm
                             ">
-                                <a href="#">Article</a>
+                           <Link href='/post'>Post</Link>
                             </li>
                         </ul>
 
