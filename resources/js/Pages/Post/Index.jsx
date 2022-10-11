@@ -9,7 +9,9 @@ export default function Post(props) {
              <Head title={props.title} />
         <div>
       <Navbar />
+  
         </div>
+        <h1 className="text-center text-6xl pt-[400px]">Coming Soon !</h1>
         </>
     )
 

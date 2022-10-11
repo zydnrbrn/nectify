@@ -78,7 +78,7 @@ export default function Welcome (props) {
                             <li className="sm:text-lg  md:text-base
                              text-main-red hover:text-black hover:rounded-sm
                             ">
-                                <Link href='/'>Feed</Link>
+                                <Link href='/feed'>Feed</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
                            text-main-red hover:text-black hover:rounded-sm
