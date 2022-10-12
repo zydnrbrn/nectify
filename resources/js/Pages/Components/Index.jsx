@@ -18,8 +18,6 @@ export default function Index() {
       md:top-[480px] lg:top-[400px] mx-16 w-[150px] h-[30px] font-bold">
         <Link href="/register">Join Now !</Link>
         </button>
-
-
       </div>
         <Slogan />
         <Fiture />

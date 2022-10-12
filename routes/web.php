@@ -3,7 +3,6 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\FeedController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -39,6 +38,4 @@ Route::get('/dashboard',[ProfileController::class, 'index'], function () {
 
 require __DIR__.'/auth.php';
 
-// feed route
-Route::get('/feed', [FeedController::class, 'index']);
 

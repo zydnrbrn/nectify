@@ -70,11 +70,6 @@ export default function Navbar (props) {
                                 <Link href='/'>Home</Link>
                             </li>
                             <li className="sm:text-lg  md:text-base
-                             text-main-red hover:text-black hover:rounded-sm
-                            ">
-                                <Link href='/feed'>Feed</Link>
-                            </li>
-                            <li className="sm:text-lg  md:text-base
                            text-main-red hover:text-black hover:rounded-sm
                             ">
                                <Link href='/chatify'>Chats</Link>
