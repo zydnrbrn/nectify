@@ -15,6 +15,8 @@ export default function Dashboard(props) {
                     <div className="bg-white overflow-hidden sm:rounded-lg">
                    
                         <div className="p-6 bg-black w-full rounded-md h-[327px]">
+
+                            <h1 className="text-white text-center text-5xl mt-[100px]">This page is under develope,sorry 🙏😣</h1>
                         </div>
                         <div className="bg-slate-300 w-[300px] top-[250px] left-[75px] absolute h-[300px] rounded-full"></div>
                         <div className="account-name text-center"></div>

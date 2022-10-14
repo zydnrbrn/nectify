@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Http\Requests\StorePostRequest;
+use Illuminate\Support\Facades\Validator;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -18,8 +21,6 @@ class PostController extends Controller
         $posts = Post::all();
         return Inertia::render('Post/Index', [
             'title' => 'Post Page',
-            'description' => 'sssssssssss',
-            'author' => 'sgsg',
             'posts' => $posts,
         ]);
     }
@@ -31,7 +32,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Post/Create');
     }
 
     /**
@@ -40,9 +41,13 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        //
+        Post::create(
+            $request->validated()
+        );
+    
+        return redirect()->route('posts.index');
     }
 
     /**

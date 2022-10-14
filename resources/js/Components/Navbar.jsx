@@ -77,7 +77,7 @@ export default function Navbar (props) {
                             <li className="sm:text-lg  md:text-base
                            text-main-red hover:text-black hover:rounded-sm
                             ">
-                           <Link href='/post'>Post</Link>
+                           <Link href='/posts'>Post</Link>
                             </li>
                         </ul>
 

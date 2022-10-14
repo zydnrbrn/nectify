@@ -30,12 +30,12 @@ Route::get('/', function () {
 
 
 // post route
-Route::get('/post', [PostController::class, 'index']);
-Route::resource('post', 'App\Http\Controllers\PostController');
+
 
 Route::get('/dashboard',[ProfileController::class, 'index'], function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::resource('/posts', PostController::class);
 require __DIR__.'/auth.php';
 
 
