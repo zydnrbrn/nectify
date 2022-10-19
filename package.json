@@ -2,8 +2,7 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
-        "postinstall": "npm run prod"
+        "build": "vite build"
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
