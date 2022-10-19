@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\User;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -14,7 +14,10 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Dashboard');
+        $users = Profile::all();
+        return Inertia::render('Dashboard', [
+            'profile' => $users
+        ]);
     }
 
     /**
@@ -24,7 +27,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Profile/Create');
     }
 
     /**
@@ -35,7 +38,11 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Profile::create(
+            $request->validated()
+        );
+    
+        return redirect()->route('Dashboard');
     }
 
     /**

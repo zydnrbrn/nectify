@@ -19,3 +19,17 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+.cover-profile {
+    background-image: url("src/img/bg-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-profile {
+    background-image: url("src/img/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
